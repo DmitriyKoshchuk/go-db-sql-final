@@ -142,8 +142,7 @@ func main() {
 	// попытка удаления отправленной посылки
 	err = service.Delete(p.Number)
 	if err != nil {
-		fmt.Println(err)
-		return
+		fmt.Printf("Ошибка удаления посылки №%d: %v\n", p.Number, err)
 	}
 
 	// вывод посылок клиента
